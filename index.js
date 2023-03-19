@@ -60,8 +60,6 @@ app.patch('/edit/:id',async (req,res)=>{
         res.json({status: 0})
     }
 })
-<<<<<<< HEAD
+
 app.listen()
-=======
-app.listen()
->>>>>>> d9198b8c8d66f96e2c28318ca9b65925fb461541
+
