@@ -59,4 +59,4 @@ app.patch('/edit/:id',async (req,res)=>{
         res.json({status: 0})
     }
 })
-app.listen(5050,()=>{console.log("server created")})
+app.listen()
