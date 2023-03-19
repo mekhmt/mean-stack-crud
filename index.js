@@ -61,5 +61,5 @@ app.patch('/edit/:id',async (req,res)=>{
     }
 })
 
-app.listen()
+app.listen(5050,()=>{console.log("server started")})
 
