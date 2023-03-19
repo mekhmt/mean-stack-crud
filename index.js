@@ -1,12 +1,13 @@
 const express = require('express')
 const mongoose = require('mongoose');
 var bodyParser = require('body-parser')
+require('dotenv').config()
 const app = express()
 const cors = require('cors')
 app.use(cors())
 //-------------mongodb------------------------
 
-const uri = "enter your mongodb url";
+const uri = process.env.MONGODB_URI
 mongoose.connect(uri, { useNewUrlParser: true}).then(()=>{console.log("connected to database")}).catch(e=>{console.log(e)})
 //------------------------------------------
 
@@ -59,4 +60,8 @@ app.patch('/edit/:id',async (req,res)=>{
         res.json({status: 0})
     }
 })
+<<<<<<< HEAD
 app.listen()
+=======
+app.listen()
+>>>>>>> d9198b8c8d66f96e2c28318ca9b65925fb461541
