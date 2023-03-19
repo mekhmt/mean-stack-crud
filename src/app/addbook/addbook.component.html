@@ -1,0 +1,54 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<div class="container-fluid">
+    <div class="row">
+		<div class="col-md-4"></div>
+    	<div class="col-md-4">
+			<form (ngSubmit)="onsubmit()">
+			<div id="contact-form" class="form-container" data-form-container style="background-color: rgba(0, 3, 3, 0.678); ">
+                <div class="row">
+                    <button [routerLink]="['/']" style="background-color: rgba(0, 0, 0, 0);"><i class="fa fa-home" style="font-size:48px;"></i></button>
+                    <div class="form-title">
+                        <span>Add New Book</span>
+                    </div>
+                   
+                </div>
+                <div class="input-container">
+                    <div class="row">
+                        <span class="req-input" >
+                            <span class="input-status" data-toggle="tooltip" data-placement="top" title="Input Your First and Last Name."> </span>
+                            <input type="text"  data-min-length="8" placeholder="Book Title" name="book_title" [(ngModel)]="data.book_title">
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="req-input">
+                            <span class="input-status" data-toggle="tooltip" data-placement="top" title="Please Input Your Email."> </span>
+                            <input type="text" placeholder="Author Name" name="author_name" [(ngModel)]="data.author_name">
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="req-input">
+                            <span class="input-status" data-toggle="tooltip" data-placement="top" title="Please Input Your Phone Number."> </span>
+                            <input type="text" placeholder="Price" name="price" [(ngModel)]="data.price">
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="req-input message-box"></span>
+                            <span class="input-status" data-toggle="tooltip" data-placement="top" title="Please Include a Message."> </span>
+                            <textarea type="textarea" data-min-length="10" placeholder="Description" name="book_title" [(ngModel)]="data.description"></textarea>
+                    </div>
+                    <div class="row submit-row">
+                        <button type="submit" class="btn btn-block submit-form" >Submit</button>
+                    </div>
+                </div>
+			</div>
+			</form>
+		</div>
+        <div class="col-md-4"></div>
+	    
+		
+	</div>
+</div>
